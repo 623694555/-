@@ -1,0 +1,28 @@
+/*
+ * @Author: yangyu 
+ * @Date: 2020-03-24 12:06:09 
+ * @Last Modified by:   yangyu 
+ * @Last Modified time: 2020-03-24 12:06:09 
+ */
+int Judge(char[]){
+    // 判断字符数组A中的输入输出序列是否为合法序列
+    int i=0;
+    int j=k=0;  //i为下标，j k 分别为字母I和O的个数
+    while(A[i]!='\0'){  //未找到字符数组尾
+        switch(A[i]){
+            case 'I': j++;break;    //入栈次数加1
+            case 'O': k++;break;    //出栈次数加1
+                if(k > j)
+                {printf("序列非法\n");exit(o)}
+        }
+        i++;    //不论A[i]是I还是O，指针i均向后移
+    }
+    if(j!=k){
+        printf("序列非法\n");
+        return false;
+    }
+    else{
+        printf("序列合法\n");
+        return true;
+    }
+}
